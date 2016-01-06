@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # app.rb
 require "sinatra"
 require "sinatra/activerecord"
@@ -17,13 +18,17 @@ get '/' do
 	erb :index
 end
 
-get '/post' do
-	@last_post = Post.last
-	erb :post_page
+get '/' do
+	erb :'signin', :layout => false
 end
 
 get '/sign-in' do
 	erb :signin
+end
+
+get '/post' do
+	@last_post = Post.last
+	erb :post_page
 end
 
 post '/sign-in' do
