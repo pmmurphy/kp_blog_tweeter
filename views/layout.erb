@@ -1,7 +1,8 @@
-<head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	
-</head>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
 
 <body>
 	<nav>
@@ -12,11 +13,24 @@
 			<li class="list"><a href="/logout" class="navbar">Logout</a></li>
 
 
-		</ul>		
+		</ul>
 
 	</nav>
-	
 
-<%= yield %>
+	<% if flash[:notice] %>
+		<div class="flash notice">
+			<%=flash[:notice] %>
+
+		</div>
+		<% end %>
+		<% if flash[:alert] %>
+			<div class="flash alert">
+			<%=flash[:alert] %>
+		</div>
+		<% end %>
+		<%=yield %>
 
 </body>
+
+
+</html>
