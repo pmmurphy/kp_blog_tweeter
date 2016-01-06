@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Gemfile
 source "http://rubygems.org"
 
